@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  margin: 0 auto;
+  width: 70%;
+}
+
+.logo{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.logo img{
+  width: 300px;
+}
+
+.input{
+  margin: 30px;
+  text-align: center;
+}
+
+.input input{
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  border: 1px solid lightgray;
+}
+
+.input button{
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #04e464;
+  cursor: pointer;
+}
+
+.input button:hover{
+  border: 2px solid #04e464;
+  background-color: white;
+}
+
+.tasks{
+  background-color: #041450;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #04e464;
+  border-radius: 10px;
+}
+
+.tasks ul li{
+  list-style: none;
+  color: white;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.task:hover{
+  background-color: white;
+  color: black;
+}
+
+.task i{
+  color: #04e464;
+  cursor: pointer;
+}
+
+.task.done span{
+  text-decoration: line-through;
+}
+
+.tasks h3{
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}

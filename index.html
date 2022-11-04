@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src='https://unpkg.com/vue@3'></script>
+  <link rel="stylesheet" href="style.css">
+
+  <title>Vue To Do List</title>
+</head>
+<body>
+  <div id="app" class="container">
+
+    <div class="logo">
+      <img :src="logoImg" alt="Logo">
+    </div>
+
+    <div class="input">
+      <input 
+      @keyup.enter="addTask()"
+      type="text" 
+      placeholder="add task"
+      v-model.trim="'newString">
+      <button
+      @click="addTask()">Add</button>
+      <p class="error">{{errorMsg}}</p>
+    </div>
+  
+
+  <div class="tasks">
+    <ul v-if="tasks.length > 0">
+      <li 
+      v-for="(task, index) in tasks"
+      class="task"
+      :class="{'done': task.done}"
+      @click="addRemDone(index)">
+        <span>{{task.attività}}</span>
+        <i 
+        @click.stop="addRemDone(index)"
+        @click="removeTask(index)"
+        class="fa-solid fa-trash"></i>
+      </li>
+    </ul>
+    <h3 v-else>Non hai attività da svolgere</h3>
+  </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

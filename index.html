@@ -23,7 +23,7 @@
       @keyup.enter="addTask()"
       type="text" 
       placeholder="add task"
-      v-model.trim="'newString">
+      v-model.trim="newString">
       <button
       @click="addTask()">Add</button>
       <p class="error">{{errorMsg}}</p>
@@ -36,11 +36,10 @@
       v-for="(task, index) in tasks"
       class="task"
       :class="{'done': task.done}"
-      @click="addRemDone(index)">
+      @click="task.done = !task.done">
         <span>{{task.attività}}</span>
         <i 
-        @click.stop="addRemDone(index)"
-        @click="removeTask(index)"
+        @click.stop="removeTask(index)"
         class="fa-solid fa-trash"></i>
       </li>
     </ul>

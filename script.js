@@ -27,17 +27,12 @@ createApp({
   },
 
   methods:{
-    addRemDone(index){
-      this.tasks[index].done = !this.tasks[index].done;
-    },
-
     removeTask(index){
       this.errorMsg = '';
       if(this.tasks[index].done){
         this.tasks.splice(index,1);
       }else{
         this.errorMsg = 'Non puoi eliminare una task senza averla prima svolta'
-        this.errorMsg = '';
       }
     },
 

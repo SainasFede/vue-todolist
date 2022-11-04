@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .container{
@@ -35,6 +36,7 @@
   border-radius: 10px;
   border: 1px solid #04e464;
   cursor: pointer;
+  margin: 10px;
 }
 
 .input button:hover{
@@ -75,12 +77,22 @@
   cursor: pointer;
 }
 
+.task i:hover{
+  color:red;
+}
+
 .task.done span{
-  text-decoration: line-through;
+  text-decoration: line-through red;
+  
 }
 
 .tasks h3{
   padding: 10px;
   background-color: white;
   border-radius: 10px;
+}
+
+.input .error{
+  padding: 10px;
+  color: crimson;
 }
